@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <title>Jimmy's Chicken Shack!</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+        
+        <style>
+          .red-button {
+        background-color: red;
+        color: white;
+        border: bold;
+      }
+
+      .yellow-button {
+        background-color: yellow;
+        color: black;
+        border: bold;
+      }
+
+      .blue-button {
+        background-color: blue;
+        color: white;
+        border: bold;
+      }
+
+      .green-button {
+        background-color: green;
+        color: black;
+        border: bold;
+      }
+
+      .purple-button {
+        background-color: purple;
+        color: black;
+        border: bold;
+      }
+
+
+      h1 {
+        font-family: 'Lobster', cursive;
+        color: orangered;
+      }
+        </style>
+      </head>
+  <body>
+    <h1>Jimmy's Chicken Shack</h1>
+
+    <button class="red-button" onclick=" alert('How Many you Have!');
+    console.log('What I got?')
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">How Many Chickens I Got?</button>
+
+<button class="yellow-button" onclick=" alert('One Added For Ya!');
+cartQuantity ++;
+console.log('1 Juicy Breast!')
+console.log(`Cart Quantity: ${cartQuantity}`);
+">1 Breast</button>
+
+<button class="blue-button" onclick=" alert('Two Added For Ya!');
+cartQuantity += 2;
+console.log('2 Juicy Thighs')
+console.log(`Cart Quantity: ${cartQuantity}`);
+">2 Thighs</button>
+
+<button class="green-button" onclick=" alert('Three Added For Ya!');
+cartQuantity += 3;
+console.log('3 juicy Wings!')
+console.log(`Cart Quantity: ${cartQuantity}`);
+">3 Wings</button>
+
+<button class="purple-button" onclick=" alert('Reset!');
+cartQuantity = 0;
+console.log('My Chicken, NOOOOOOOO!!!!!!')
+console.log(`Cart Quantity: ${cartQuantity}`);
+">None For You!</button>
+
+
+        <script>
+          alert('Jimmys Chicken Shack!');
+          let cartQuantity = 0;
+        </script>
+  </body>
+</html>
