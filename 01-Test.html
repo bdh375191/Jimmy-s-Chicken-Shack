@@ -43,12 +43,22 @@
         font-family: 'Lobster', cursive;
         color: orangered;
       }
+
+      .comment-section {
+            margin-top: 20px;
+        }
+
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
         </style>
       </head>
   <body>
     <h1>Jimmy's Chicken Shack</h1>
 
-    <button class="red-button" onclick="showCartQuantity('How Many you Have!')
+    <button class="red-button" onclick="showCartQuantity('How Many You Have!')
     console.log('What I got?')
     console.log(`Cart Quantity: ${cartQuantity}`);
     ">How Many Chickens I Got?</button>
@@ -75,6 +85,15 @@ console.log(`Cart Quantity: ${cartQuantity}`);
 
     <div id="cart-info"></div>
 
+    <div class="comment-section">
+      <h2>Comments</h2>
+      <form id="comment-form">
+          <textarea id="comment-text" placeholder="How's My Chicken?!" required></textarea><br>
+          <button type="submit">Holler At Your Boy!</button>
+      </form>
+      <div id="comments"></div>
+  </div>
+
 
         <script>
           alert("Welcome To Jimmy's Chicken Shack!");
@@ -99,6 +118,16 @@ console.log(`Cart Quantity: ${cartQuantity}`);
             console.log(`Cart Quantity: ${cartQuantity}`);
             document.getElementById('cart-info').innerText = `Cart Quantity: ${cartQuantity}`;
         }
+
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const commentText = document.getElementById('comment-text').value;
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+            commentDiv.innerText = commentText;
+            document.getElementById('comments').appendChild(commentDiv);
+            document.getElementById('comment-form').reset();
+        });
         </script>
   </body>
 </html>
